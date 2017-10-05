@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .bookHome {
@@ -23,4 +24,25 @@ body {
   text-align: center;
   padding-top: 15px;
   font-size: 40px;
+}
+
+.moveUpMusic {
+  height: 100%;
+  margin-top: 0;
+  transition: margin-top 2s, height 2s;
+}
+
+.moveUpBook {
+  margin-top: -25%;
+  transition: margin-top 2s;
+}
+
+.moveDownMusic {
+  margin-top: 50%;
+  transition: margin-top 2s;
+}
+
+.moveDownBook {
+  height: 100%;
+  transition: height 2s;
 }
