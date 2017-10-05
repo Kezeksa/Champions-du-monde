@@ -1,6 +1,22 @@
 <?php
 include 'header.php';
+
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="bookHome">
   <h1 class="titles">Livres</h1>
