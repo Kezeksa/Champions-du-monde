@@ -2,22 +2,7 @@
 include 'header.php';
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="sections">
 <div class="bookHome">
   <h1 class="titles">Books</h1>
   <form class="hiddenFormBook" action="">
@@ -31,6 +16,11 @@ include 'header.php';
     <input class="autofocusMusic" type="text" name="researchMusics"><br>
   <input type="submit">
 </form>
+</div>
+</div>
+
+<div class="item arrowBook">
+<span class="glyphicon">&#xe113;</span>
 </div>
 <script>
 $(document).ready(function() {
@@ -49,6 +39,10 @@ $(document).ready(function() {
      $(".autofocusBook").focus();
    });
 
+   $(".arrowBook").click(function() {
+     $(".bookHome").removeClass("moveDownBook");
+     $(".musicHome").removeClass("moveDownMusic");
+   });
 });
 </script>
 
