@@ -23,12 +23,17 @@ body {
     margin-left: 45%;
     text-align: center;
 }
+
 .container > h1 {
     text-align: center;
     margin: 50px auto;
 }
 .logoHeader {
     width: 120px;
+}
+.form_header{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 /*FIN HEADER*/
 
