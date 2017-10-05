@@ -1,10 +1,11 @@
+<? xml version = "1.0" encoding = "UTF-8" ?>
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder12
- * Date: 05/10/17
- * Time: 16:19
- */
+session_start();
+
+if (!empty($_POST['user_name'])) {
+    $_SESSION['user_name'] = $_POST['user_name'];
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +31,9 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target=".navbar-collapse">
@@ -40,26 +42,52 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader">
+                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
-                    <li><a href="#about" class="navbarFontColor">About</a></li>
-                    <li><a href="#contact" class="navbarFontColor">Contact</a></li>
+                    <?php if ($_SESSION['user_name']) { ?>
+                        <ul id="menu-demo2">
+                            <li><a href="#">Lien menu 1</a>
+                                <ul>
+                                    <li><a href="#">lien sous menu 1</a></li>
+                                    <li><a href="#">lien sous menu 1</a></li>
+                                    <li><a href="#">lien sous menu 1</a></li>
+                                    <li><a href="#">lien sous menu 1</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Lien menu 2</a>
+                                <ul>
+                                    <li><a href="#">Lien sous menu 2</a></li>
+                                    <li><a href="#">Lien sous menu 2</a></li>
+                                    <li><a href="#">Lien sous menu 2</a></li>
+                                    <li><a href="#">Lien sous menu 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php } else { ?>
+                        <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
+                        <li><a href="#books" class="navbarFontColor">Books</a></li>
+                        <li><a href="#musics" class="navbarFontColor">Musics</a></li>
+                    <?php } ?>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <div class="jumbotron">
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
 
             <!-- Large modal -->
+            <?php if (!$_SESSION['user_name']) { ?>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
             </button>
-
+            <?php } else { ?>
+            <p>
+                <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
+            </p>
+            <?php } ?>
             <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
@@ -85,10 +113,6 @@
                 </div>
             </div>
 
-
-            <p>
-                <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
-            </p>
         </div>
     </div>
 </header>

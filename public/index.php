@@ -1,9 +1,10 @@
 <?php
 include 'header.php';
-
 ?>
+
+
 <div class="sections">
-<div class="bookHome">
+<div id="books" class="bookHome">
   <h1 class="titles">Books</h1>
   <form class="formBook hiddenFormBook" action="">
     <input class="autofocusBook" type="text" name="researchBooks"><br>
@@ -25,7 +26,7 @@ include 'header.php';
 <span class="glyphicon">&#xe113;</span>
 </div>
 <script>
-$(document).ready(function() {
+    $(document).ready(function () {
 
    $(".musicHome").click(function() {
      $(".bookHome").addClass("moveUpBook");
