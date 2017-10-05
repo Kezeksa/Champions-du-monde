@@ -39,6 +39,8 @@ body {
   Width: 100%;
   background: transparent;
   border: solid pink 1px;
+  background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d")no-repeat;
+  background-size: cover;
 }
 
 .musicHome {
