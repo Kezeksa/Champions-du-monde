@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    /*overflow: hidden;*/
+    font-family: Poppins;
+    font-size: 20px;
+}
+/*DEBUT HEADER*/
+.nav > li {
+    margin: 0 20px;
+}
+.icon-bar {
+    background-color: white;
+}
+.jumbotron {
+    background-color: lightgrey;
+}
+.navbarFontColor {
+    color: dimgrey;
+}
+.btn-primary {
+    margin-left: 45%;
+    text-align: center;
+}
+.container > h1 {
+    text-align: center;
+    margin: 50px auto;
+}
+.logoHeader {
+    width: 120px;
+}
+/*FIN HEADER*/
+
+
+/*DEBUT ANIMATION NUMERO 1*/
+.bookHome {
+  position: absolute;
+  height: 50%;
+  Width: 100%;
+  background: transparent;
+  border: solid pink 1px;
+}
+
+.musicHome {
+  position: absolute;
+  margin-top: 23.75%;
+  height: 50%;
+  width: 100%;
+  background: url("../images/musicbg.jpg") center no-repeat;
+  border: solid black 1px;
+}
+
+.titles {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 40px;
+}
+
+.moveUpMusic {
+  height: 100%;
+  margin-top: 0;
+  transition: margin-top 2s, height 2s;
+}
+
+.moveUpBook {
+  margin-top: -25%;
+  transition: margin-top 2s;
+}
+
+.moveDownMusic {
+  margin-top: 50%;
+  transition: margin-top 2s;
+}
+
+.moveDownBook {
+  height: 100%;
+  transition: height 2s;
+}
+
+.hiddenFormBook {
+  display: none;
+}
+
+.hiddenFormMusic {
+  display: none;
+}
+/*FIN ANIMATION NUMERO 1*/
+
+form {
+  text-align: center;
+}
