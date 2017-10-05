@@ -33,7 +33,6 @@ if (!empty($_POST['user_name'])) {
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
-
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target=".navbar-collapse">
@@ -48,22 +47,22 @@ if (!empty($_POST['user_name'])) {
                 <!--<ul class="nav navbar-nav">-->
                 <ul id="menu-demo2">
                     <?php if ($_SESSION['user_name']) { ?>
-                        <li><a href="#">Mes livres</a>
+                        <li><a href="#">My books</a>
                             <ul>
-                                <li><a href="#" class="navbarFontColor">Livres lus</a></li>
-                                <li><a href="#" class="navbarFontColor">Livres que j'aimerais lire</a></li>
+                                <li><a href="#" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="#" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Mes musiques</a>
+                        <li><a href="#">My musics</a>
                             <ul>
-                                <li><a href="#" class="navbarFontColor">Musiques écoutées</a></li>
-                                <li><a href="#" class="navbarFontColor">Musiques que j'aimerais écouter</a></li>
+                                <li><a href="#" class="navbarFontColor">Musics I've listened</a></li>
+                                <li><a href="#" class="navbarFontColor">Musics I'd like to listen</a></li>
                             </ul>
                         </li>
                     <?php } else { ?>
                         <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
-                        <li><a href="#books" class="navbarFontColor">Books</a></li>
-                        <li><a href="#musics" class="navbarFontColor">Musics</a></li>
+                        <li><a href="books.php" class="navbarFontColor">Books</a></li>
+                        <li><a href="music.php" class="navbarFontColor">Musics</a></li>
                     <?php } ?>
                 </ul>
             </div>
@@ -73,7 +72,6 @@ if (!empty($_POST['user_name'])) {
     <div class="jumbotron">
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
-
             <!-- Large modal -->
             <?php if (!$_SESSION['user_name']) { ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
