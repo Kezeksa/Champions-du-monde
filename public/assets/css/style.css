@@ -29,7 +29,7 @@ body {
     width: 120px;
 }
 /*FIN HEADER*/
-    
+
 
 /*DEBUT ANIMATION NUMERO 1*/
 .bookHome {
@@ -75,4 +75,16 @@ body {
   height: 100%;
   transition: height 2s;
 }
+
+.hiddenFormBook {
+  display: none;
+}
+
+.hiddenFormMusic {
+  display: none;
+}
 /*FIN ANIMATION NUMERO 1*/
+
+form {
+  text-align: center;
+}
