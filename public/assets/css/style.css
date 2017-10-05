@@ -144,6 +144,10 @@ body {
   transition: height 2s, margin-top 2s;
 }
 
+.autofocusBook, .autofocusMusic {
+  margin-bottom: 10px;
+}
+
 .titles {
   text-align: center;
   padding-top: 15px;
