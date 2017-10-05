@@ -3,10 +3,14 @@ include 'header.php';
 ?>
 
 <div class="bookHome">
-  <h1 class="titles">Livres</h1>
+  <h1 class="titles">Books</h1>
+  <form class="hiddenForm" action="">
+    <input type="text" name="research" autofocus><br>
+  <input type="submit">
+</form>
 </div>
 <div class="musicHome">
-  <h1 class="titles">Musiques</h1>
+  <h1 class="titles">Musics</h1>
 </div>
 <script>
 $(document).ready(function() {

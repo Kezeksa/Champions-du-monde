@@ -46,3 +46,7 @@ body {
   height: 100%;
   transition: height 2s;
 }
+
+.hiddenForm {
+  display: none;
+}
