@@ -18,22 +18,26 @@ include 'header.php';
     <div class="row">
         <form action="#" method="post">
             <div class="form-group col-xs-6 col-xs-offset-1">
-                <input type="text" class="form-control" id="searchBook" name="search" value="<?= $_POST['search'] ?? '' ?>" placeholder="Rechercher un livre">
+                <input type="text" class="form-control" id="searchBook" name="search"
+                       value="<?= $_POST['search'] ?? '' ?>" placeholder="Find a book">
             </div>
             <div class="col-xs-4">
                 <select name="search_type">
-                    <option value="title">par titre</option>
-                    <option value="author">par auteur</option>
+                    <option value="title">by title</option>
+                    <option value="author">by author</option>
                 </select>
-                <button type="submit" class="btn btn-default">Rechercher</button>
+                <button type="submit" class="btn btn-default"><span
+                            class="glyphicon glyphicon-search"></span> Search
+                </button>
             </div>
         </form>
     </div>
 
-    <?php
-    if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
-        <div>Résultat de la recherche : <?= $nb_results ?> <?= 'livres trouvés' ?></div>
-    <?php endif ?>
+<?php
+if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
+    <div>Searching result by <?= $_POST['search_type'] ?>
+        : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books find' : 'book find' ?></div>
+<?php endif ?>
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
@@ -48,14 +52,16 @@ include 'header.php';
                             <!--<img src="..." alt="...">-->
                             <div class="caption">
                                 <h3><?= $resp['title'] ?></h3>
-                                <p>Auteur : <?php foreach ($resp['author_name'] as $auteur) {
+                                <p>Author : <?php foreach ($resp['author_name'] as $auteur) {
                                         echo $auteur;
                                     } ?></p>
-                                <h4>Année : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
-                                <p><a href="#" class="btn btn-success" role="button"><span
-                                                class="glyphicon glyphicon-plus"></span> Je l'ai lu !</a>
-                                    <a href="#" class="btn btn-primary" role="button"><span
-                                                class="glyphicon glyphicon-edit"></span> Je le veux !</a></p>
+                                <h4>Year : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
+                                <?php if ($_SESSION['user_name']) : ?>
+                                    <p><a href="#" class="btn btn-success" role="button"><span
+                                                    class="glyphicon glyphicon-plus"></span> I have read it !</a>
+                                        <a href="#" class="btn btn-primary" role="button"><span
+                                                    class="glyphicon glyphicon-edit"></span> I want it !</a></p>
+                                <?php endif ?>
                             </div>
                         </div>
                     </div>
