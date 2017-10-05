@@ -22,7 +22,7 @@ body {
 .jumbotron {
     background-image: url('../images/congruent_pentagon.png');
     margin-bottom: 0;
-    z-index: 900;
+    z-index: 3;
     position: relative;
 }
 .navbarFontColor {
@@ -156,6 +156,10 @@ body {
 .form_header{
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.modal-backdrop {
+    z-index:  auto;
 }
 /*FIN HEADER*/
 
