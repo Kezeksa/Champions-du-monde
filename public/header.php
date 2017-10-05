@@ -22,7 +22,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <title>Hackathon</title>
 </head>
@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="img/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader">
+                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader">
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
