@@ -33,7 +33,6 @@ if (!empty($_POST['user_name'])) {
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
-
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target=".navbar-collapse">
@@ -45,30 +44,25 @@ if (!empty($_POST['user_name'])) {
                 <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
             </div>
             <div class="collapse navbar-collapse pull-right">
-                <ul class="nav navbar-nav">
+                <!--<ul class="nav navbar-nav">-->
+                <ul id="menu-demo2">
                     <?php if ($_SESSION['user_name']) { ?>
-                        <ul id="menu-demo2">
-                            <li><a href="#">Lien menu 1</a>
-                                <ul>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Lien menu 2</a>
-                                <ul>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <li><a href="#">My books</a>
+                            <ul>
+                                <li><a href="#" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="#" class="navbarFontColor">Books I'd like to read</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">My musics</a>
+                            <ul>
+                                <li><a href="#" class="navbarFontColor">Musics I've listened</a></li>
+                                <li><a href="#" class="navbarFontColor">Musics I'd like to listen</a></li>
+                            </ul>
+                        </li>
                     <?php } else { ?>
                         <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
-                        <li><a href="#books" class="navbarFontColor">Books</a></li>
-                        <li><a href="#musics" class="navbarFontColor">Musics</a></li>
+                        <li><a href="books.php" class="navbarFontColor">Books</a></li>
+                        <li><a href="music.php" class="navbarFontColor">Musics</a></li>
                     <?php } ?>
                 </ul>
             </div>
@@ -78,15 +72,14 @@ if (!empty($_POST['user_name'])) {
     <div class="jumbotron">
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
-
             <!-- Large modal -->
             <?php if (!$_SESSION['user_name']) { ?>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
-            </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
+                </button>
             <?php } else { ?>
-            <p>
-                <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
-            </p>
+                <p>
+                    <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
+                </p>
             <?php } ?>
             <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">

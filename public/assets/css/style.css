@@ -30,15 +30,14 @@ body {
 }
 .btn {
     font-size: 20px;
+    height: 48.5px;
 }
 .btn-primary {
     margin-left: 45%;
 }
-
 .btn-danger {
     margin-left: 45%;
 }
-
 .container > h1 {
     text-align: center;
     margin: 50px auto;
@@ -46,7 +45,13 @@ body {
 .logoHeader {
     width: 120px;
 }
-
+.navbar-nav li:hover li a{
+    color:dimgrey;
+    text-transform:inherit;
+}
+#menu-demo2 {
+    background-color: rgba(250,235,215,0.7);
+}
 #menu-demo2, #menu-demo2 ul{
     padding:0;
     margin:0;
@@ -61,6 +66,7 @@ body {
 #menu-demo2 ul li{
     display:inherit;
     border-radius:0;
+    background-color: rgba(250,235,215,0.7);
 }
 #menu-demo2 ul li:hover{
     border-radius:0;
@@ -82,72 +88,22 @@ body {
 #menu-demo2 li:hover ul{
     max-height:15em;
 }
-/* background des liens menus */
-#menu-demo2 li:first-child{
-    background-color: #65537A;
-    background-image:-webkit-linear-gradient(top, #65537A 0%, #2A2333 100%);
-    background-image:linear-gradient(to bottom, #65537A 0%, #2A2333 100%);
-}
-#menu-demo2 li:nth-child(2){
-    background-color: #729EBF;
-    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-    background-image:linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
-}
-#menu-demo2 li:nth-child(3){
-    background-color: #F6AD1A;
-    background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
-    background-image:linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
-}
-#menu-demo2 li:last-child{
-    background-color: #CFFF6A;
-    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
-    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
-}
-/* background des liens sous menus */
-#menu-demo2 li:first-child li{
-    background:#2A2333;
-}
-#menu-demo2 li:nth-child(2) li{
-    background:#333A40;
-}
-#menu-demo2 li:nth-child(3) li{
-    background:#9F391A;
-}
-#menu-demo2 li:last-child li{
-    background:#677F35;
-}
-/* background des liens menus et sous menus au survol */
-#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
-    background:#65537A;
-}
-#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
-    background:#729EBF;
-}
-#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
-    background:#F6AD1A;
-}
-#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
-    background:#CFFF6A;
-}
-/* les a href */
 #menu-demo2 a{
     text-decoration:none;
     display:block;
     padding:8px 32px;
-    color:#fff;
-    font-family:arial;
+    color: dimgrey;
 }
 #menu-demo2 ul a{
     padding:8px 0;
 }
 #menu-demo2 li:hover li a{
-    color:#fff;
+    color:dimgrey;
     text-transform:inherit;
 }
 #menu-demo2 li:hover a, #menu-demo2 li li:hover a{
     color:#000;
 }
-
 @media (max-width:840px) {
     .logoHeader {
         width: 80px;
