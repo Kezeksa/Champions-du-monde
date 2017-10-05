@@ -112,7 +112,8 @@ body {
 
 /*DEBUT ANIMATION NUMERO 1*/
 .sections {
-  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .bookHome {
@@ -123,6 +124,7 @@ body {
   border: solid pink 1px;
   background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d")no-repeat;
   background-size: cover;
+  transition: height 2s, margin-top 2s;
 }
 
 .musicHome {
@@ -132,6 +134,7 @@ body {
   width: 100%;
   background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
   border: solid black 1px;
+  transition: height 2s, margin-top 2s;
 }
 
 .titles {
@@ -178,11 +181,38 @@ body {
   position: fixed;
   color: white;
   text-align: center;
-  margin-top: 25%;
-  font-size: 50px;
+  margin-top: 22.5%;
+  font-size: 8vh;
   z-index: 2;
+  margin-left: 49%;
 }
 
+.floating {
+  animation-name: Floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@-moz-keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.hiddenArrowBook {
+  visibility: hidden;
+}
+
+.hiddenArrowMusic {
+  visibility: hidden;
+}
 /*FIN ANIMATION NUMERO 1*/
 
 form {
