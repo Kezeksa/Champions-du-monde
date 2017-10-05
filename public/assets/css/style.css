@@ -76,7 +76,15 @@ body {
   transition: height 2s;
 }
 
-.hiddenForm {
+.hiddenFormBook {
+  display: none;
+}
+
+.hiddenFormMusic {
   display: none;
 }
 /*FIN ANIMATION NUMERO 1*/
+
+form {
+  text-align: center;
+}
