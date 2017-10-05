@@ -46,7 +46,7 @@ if (!empty($_POST['user_name'])) {
             <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
                     <?php if ($_SESSION['user_name']) { ?>
-                
+
 
                     <?php } else { ?>
                         <li class="active"><a href="#" class="navbarFontColor">Home</a></li>

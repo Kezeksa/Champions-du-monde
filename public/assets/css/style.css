@@ -17,6 +17,7 @@ body {
 }
 .jumbotron {
     background-image: url('../images/congruent_pentagon.png');
+    margin-bottom: 0;
 }
 .navbarFontColor {
     color: dimgrey;
@@ -47,9 +48,13 @@ body {
 
 
 /*DEBUT ANIMATION NUMERO 1*/
+.sections {
+  height: 100%;
+}
+
 .bookHome {
   position: absolute;
-  height: 50%;
+  height: 50vh;
   Width: 100%;
   background: transparent;
   border: solid pink 1px;
@@ -60,7 +65,7 @@ body {
 .musicHome {
   position: absolute;
   margin-top: 23.75%;
-  height: 50%;
+  height: 50vh;
   width: 100%;
   background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
   border: solid black 1px;
@@ -70,27 +75,32 @@ body {
   text-align: center;
   padding-top: 15px;
   font-size: 40px;
+  color: white;
 }
 
 .moveUpMusic {
-  height: 100%;
+  height: 100vh;
   margin-top: 0;
   transition: margin-top 2s, height 2s;
+  transition-timing-function: linear;
 }
 
 .moveUpBook {
-  margin-top: -25%;
+  margin-top: -23%;
   transition: margin-top 2s;
+  transition-timing-function: linear;
 }
 
 .moveDownMusic {
-  margin-top: 50%;
+  margin-top: 47%;
   transition: margin-top 2s;
+  transition-timing-function: linear;
 }
 
 .moveDownBook {
-  height: 100%;
+  height: 100vh;
   transition: height 2s;
+  transition-timing-function: linear;
 }
 
 .hiddenFormBook {
@@ -100,6 +110,16 @@ body {
 .hiddenFormMusic {
   display: none;
 }
+
+.item {
+  position: fixed;
+  color: white;
+  text-align: center;
+  margin-top: 25%;
+  font-size: 50px;
+  z-index: 2;
+}
+
 /*FIN ANIMATION NUMERO 1*/
 
 form {

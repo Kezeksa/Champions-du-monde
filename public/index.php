@@ -3,52 +3,48 @@ include 'header.php';
 ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="books" class="bookHome">
-  <h1 class="titles">Books</h1>
-  <form class="hiddenFormBook" action="">
-    <input class="autofocusBook" type="text" name="researchBooks"><br>
-  <input type="submit">
-</form>
+<div class="sections">
+    <div id="books" class="bookHome">
+        <h1 class="titles">Books</h1>
+        <form class="hiddenFormBook" action="">
+            <input class="autofocusBook" type="text" name="researchBooks"><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div id="musics" class="musicHome">
+        <h1 class="titles">Musics</h1>
+        <form class="hiddenFormMusic" action="">
+            <input class="autofocusMusic" type="text" name="researchMusics"><br>
+            <input type="submit">
+        </form>
+    </div>
 </div>
-<div id="musics" class="musicHome">
-  <h1 class="titles">Musics</h1>
-  <form class="hiddenFormMusic" action="">
-    <input class="autofocusMusic" type="text" name="researchMusics"><br>
-  <input type="submit">
-</form>
+
+<div class="item arrowBook">
+    <span class="glyphicon">&#xe113;</span>
 </div>
 <script>
-$(document).ready(function() {
+    $(document).ready(function () {
 
-   $(".musicHome").click(function() {
-     $(".bookHome").addClass("moveUpBook");
-     $(this).addClass("moveUpMusic");
-     $(".hiddenFormMusic").removeClass("hiddenFormMusic");
-     $(".autofocusMusic").focus();
-   });
+        $(".musicHome").click(function () {
+            $(".bookHome").addClass("moveUpBook");
+            $(this).addClass("moveUpMusic");
+            $(".hiddenFormMusic").removeClass("hiddenFormMusic");
+            $(".autofocusMusic").focus();
+        });
 
-   $(".bookHome").click(function() {
-     $(".musicHome").addClass("moveDownMusic");
-     $(this).addClass("moveDownBook");
-     $(".hiddenFormBook").removeClass("hiddenFormBook");
-     $(".autofocusBook").focus();
-   });
+        $(".bookHome").click(function () {
+            $(".musicHome").addClass("moveDownMusic");
+            $(this).addClass("moveDownBook");
+            $(".hiddenFormBook").removeClass("hiddenFormBook");
+            $(".autofocusBook").focus();
+        });
 
-});
+        $(".arrowBook").click(function () {
+            $(".bookHome").removeClass("moveDownBook");
+            $(".musicHome").removeClass("moveDownMusic");
+        });
+    });
 </script>
 
 <?php
