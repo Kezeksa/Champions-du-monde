@@ -1,7 +1,4 @@
-html, body {
-  height:100vh;
-  overflow: hidden;
-}
+
 
 body {
     margin: 0;
@@ -24,6 +21,7 @@ body {
     margin-bottom: 0;
     z-index: 3;
     position: relative;
+    height: 30vh;
 }
 .navbarFontColor {
     color: dimgrey;
@@ -123,11 +121,12 @@ body {
 /*DEBUT ANIMATION NUMERO 1*/
 .sections {
   overflow: hidden;
+  height: 70%;
 }
 
 .bookHome {
   position: absolute;
-  height: 35%;
+  height: 36.5%;
   Width: 100%;
   background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d") no-repeat center bottom;
   background-size: cover;
@@ -138,7 +137,7 @@ body {
 .musicHome {
   position: absolute;
   margin-top: 16%;
-  height: 35%;
+  height: 36.2%;
   width: 100%;
   background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
   transition: height 2s, margin-top 2s;
