@@ -45,26 +45,21 @@ if (!empty($_POST['user_name'])) {
                 <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
             </div>
             <div class="collapse navbar-collapse pull-right">
-                <ul class="nav navbar-nav">
+                <!--<ul class="nav navbar-nav">-->
+                <ul id="menu-demo2">
                     <?php if ($_SESSION['user_name']) { ?>
-                        <ul id="menu-demo2">
-                            <li><a href="#">Lien menu 1</a>
-                                <ul>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                    <li><a href="#">lien sous menu 1</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Lien menu 2</a>
-                                <ul>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                    <li><a href="#">Lien sous menu 2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <li><a href="#">Mes livres</a>
+                            <ul>
+                                <li><a href="#" class="navbarFontColor">Livres lus</a></li>
+                                <li><a href="#" class="navbarFontColor">Livres que j'aimerais lire</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mes musiques</a>
+                            <ul>
+                                <li><a href="#" class="navbarFontColor">Musiques écoutées</a></li>
+                                <li><a href="#" class="navbarFontColor">Musiques que j'aimerais écouter</a></li>
+                            </ul>
+                        </li>
                     <?php } else { ?>
                         <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
                         <li><a href="#books" class="navbarFontColor">Books</a></li>
@@ -81,12 +76,12 @@ if (!empty($_POST['user_name'])) {
 
             <!-- Large modal -->
             <?php if (!$_SESSION['user_name']) { ?>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
-            </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
+                </button>
             <?php } else { ?>
-            <p>
-                <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
-            </p>
+                <p>
+                    <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
+                </p>
             <?php } ?>
             <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
