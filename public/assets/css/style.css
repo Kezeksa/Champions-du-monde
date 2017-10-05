@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*overflow: hidden;*/
-    font-family: Poppins;
+    font-family: Pacifico;
     font-size: 20px;
 }
 /*DEBUT HEADER*/
@@ -12,7 +12,8 @@ body {
     background-color: white;
 }
 .jumbotron {
-    background-color: limegreen;
+    /*background-color: indianred;*/
+    background-image: url('../images/congruent_pentagon.png');
 }
 .navbarFontColor {
     color: dimgrey;
