@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder12
- * Date: 05/10/17
- * Time: 16:19
- */
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +35,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader">
+                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
+
                     <li class="active"><a href="#" class="navbarFontColor">Home</a></li>
-                    <li><a href="#about" class="navbarFontColor">About</a></li>
-                    <li><a href="#contact" class="navbarFontColor">Contact</a></li>
+                    <li><a href="#books" class="navbarFontColor">Books</a></li>
+                    <li><a href="#musics" class="navbarFontColor">Musics</a></li>
+
                 </ul>
             </div>
         </div>

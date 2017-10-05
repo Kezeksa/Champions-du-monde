@@ -18,14 +18,14 @@ include 'header.php';
 
 
 
-<div class="bookHome">
+<div id="books" class="bookHome">
   <h1 class="titles">Books</h1>
   <form class="hiddenFormBook" action="">
     <input class="autofocusBook" type="text" name="researchBooks"><br>
   <input type="submit">
 </form>
 </div>
-<div class="musicHome">
+<div id="musics" class="musicHome">
   <h1 class="titles">Musics</h1>
   <form class="hiddenFormMusic" action="">
     <input class="autofocusMusic" type="text" name="researchMusics"><br>

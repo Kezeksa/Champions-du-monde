@@ -8,11 +8,14 @@ body {
 .nav > li {
     margin: 0 20px;
 }
+.navbar-nav {
+    background-color: rgba(250,235,215,0.7);
+    border-radius: 10px;
+}
 .icon-bar {
-    background-color: white;
+    background-color: black;
 }
 .jumbotron {
-    /*background-color: indianred;*/
     background-image: url('../images/congruent_pentagon.png');
 }
 .navbarFontColor {
@@ -28,6 +31,12 @@ body {
 }
 .logoHeader {
     width: 120px;
+}
+
+@media (max-width:840px) {
+    .logoHeader {
+        width: 80px;
+    }
 }
 /*FIN HEADER*/
 
