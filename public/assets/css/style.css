@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+.bookHome {
+  position: absolute;
+  height: 50%;
+  Width: 100%;
+  background: transparent;
+  border: solid pink 1px;
+}
+
+.musicHome {
+  position: absolute;
+  margin-top: 23.75%;
+  height: 50%;
+  width: 100%;
+  background: url("../images/musicbg.jpg") center no-repeat;
+  border: solid black 1px;
+}
+
+.titles {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 40px;
+}
