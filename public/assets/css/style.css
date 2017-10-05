@@ -8,20 +8,32 @@ body {
 .nav > li {
     margin: 0 20px;
 }
+.navbar-nav {
+    background-color: rgba(250,235,215,0.7);
+    border-radius: 10px;
+}
 .icon-bar {
-    background-color: white;
+    background-color: black;
 }
 .jumbotron {
-    /*background-color: indianred;*/
     background-image: url('../images/congruent_pentagon.png');
+    margin-bottom: 0;
+    height: 30%;
 }
 .navbarFontColor {
     color: dimgrey;
 }
+.btn {
+    font-size: 20px;
+}
 .btn-primary {
     margin-left: 45%;
-    text-align: center;
 }
+
+.btn-danger {
+    margin-left: 45%;
+}
+
 .container > h1 {
     text-align: center;
     margin: 50px auto;
@@ -29,54 +41,177 @@ body {
 .logoHeader {
     width: 120px;
 }
+
+#menu-demo2, #menu-demo2 ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
+}
+#menu-demo2 li{
+    display:inline-block;
+    position:relative;
+    border-radius:8px 8px 0 0;
+}
+#menu-demo2 ul li{
+    display:inherit;
+    border-radius:0;
+}
+#menu-demo2 ul li:hover{
+    border-radius:0;
+}
+#menu-demo2 ul li:last-child{
+    border-radius:0 0 8px 8px;
+}
+#menu-demo2 ul{
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+}
+#menu-demo2 li:hover ul{
+    max-height:15em;
+}
+/* background des liens menus */
+#menu-demo2 li:first-child{
+    background-color: #65537A;
+    background-image:-webkit-linear-gradient(top, #65537A 0%, #2A2333 100%);
+    background-image:linear-gradient(to bottom, #65537A 0%, #2A2333 100%);
+}
+#menu-demo2 li:nth-child(2){
+    background-color: #729EBF;
+    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image:linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+}
+#menu-demo2 li:nth-child(3){
+    background-color: #F6AD1A;
+    background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
+    background-image:linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
+}
+#menu-demo2 li:last-child{
+    background-color: #CFFF6A;
+    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
+}
+/* background des liens sous menus */
+#menu-demo2 li:first-child li{
+    background:#2A2333;
+}
+#menu-demo2 li:nth-child(2) li{
+    background:#333A40;
+}
+#menu-demo2 li:nth-child(3) li{
+    background:#9F391A;
+}
+#menu-demo2 li:last-child li{
+    background:#677F35;
+}
+/* background des liens menus et sous menus au survol */
+#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+    background:#65537A;
+}
+#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
+    background:#729EBF;
+}
+#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
+    background:#F6AD1A;
+}
+#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
+    background:#CFFF6A;
+}
+/* les a href */
+#menu-demo2 a{
+    text-decoration:none;
+    display:block;
+    padding:8px 32px;
+    color:#fff;
+    font-family:arial;
+}
+#menu-demo2 ul a{
+    padding:8px 0;
+}
+#menu-demo2 li:hover li a{
+    color:#fff;
+    text-transform:inherit;
+}
+#menu-demo2 li:hover a, #menu-demo2 li li:hover a{
+    color:#000;
+}
+
+@media (max-width:840px) {
+    .logoHeader {
+        width: 80px;
+    }
+}
+.form_header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 /*FIN HEADER*/
 
 
 /*DEBUT ANIMATION NUMERO 1*/
+.sections {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .bookHome {
   position: absolute;
-  height: 50%;
+  height: 50vh;
   Width: 100%;
   background: transparent;
   border: solid pink 1px;
   background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d")no-repeat;
   background-size: cover;
+  transition: height 2s, margin-top 2s;
 }
 
 .musicHome {
   position: absolute;
   margin-top: 23.75%;
-  height: 50%;
+  height: 50vh;
   width: 100%;
   background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
   border: solid black 1px;
+  transition: height 2s, margin-top 2s;
 }
 
 .titles {
   text-align: center;
   padding-top: 15px;
   font-size: 40px;
+  color: white;
 }
 
 .moveUpMusic {
-  height: 100%;
+  height: 100vh;
   margin-top: 0;
   transition: margin-top 2s, height 2s;
+  transition-timing-function: linear;
 }
 
 .moveUpBook {
-  margin-top: -25%;
+  margin-top: -23%;
   transition: margin-top 2s;
+  transition-timing-function: linear;
 }
 
 .moveDownMusic {
-  margin-top: 50%;
+  margin-top: 47%;
   transition: margin-top 2s;
+  transition-timing-function: linear;
 }
 
 .moveDownBook {
-  height: 100%;
+  height: 100vh;
   transition: height 2s;
+  transition-timing-function: linear;
 }
 
 .hiddenFormBook {
@@ -85,6 +220,43 @@ body {
 
 .hiddenFormMusic {
   display: none;
+}
+
+.item {
+  position: fixed;
+  color: white;
+  text-align: center;
+  margin-top: 22.5%;
+  font-size: 8vh;
+  z-index: 2;
+  margin-left: 49%;
+}
+
+.floating {
+  animation-name: Floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@-moz-keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.hiddenArrowBook {
+  visibility: hidden;
+}
+
+.hiddenArrowMusic {
+  visibility: hidden;
 }
 /*FIN ANIMATION NUMERO 1*/
 
