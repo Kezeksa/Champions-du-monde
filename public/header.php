@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder12
- * Date: 05/10/17
- * Time: 16:19
- */
+require '../connect.php';
+$bdd = mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);
 ?>
 
 <!DOCTYPE html>
