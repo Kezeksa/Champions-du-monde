@@ -55,9 +55,37 @@
     <div class="jumbotron">
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
-            <p>
-                <a class="btn btn-primary btn-lg">Log in</a>
-            </p>
+
+            <!-- Large modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
+            </button>
+
+            <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <form action="" method="post" class="form-horizontal form_header">
+                            <fieldset>
+                                <legend>Déjà enregistré ?</legend>
+                                <div class="form-group">
+                                    <label for="login" class="col-sm-2 control-label">Login</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="user_name" value="" id="login"
+                                               placeholder="Votre nom ici">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-1 col-sm-10">
+                                        <button type="submit" class="btn btn-default">Envoyer</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
             <p>
                 <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
             </p>
