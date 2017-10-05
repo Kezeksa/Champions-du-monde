@@ -2,17 +2,27 @@
 include 'header.php';
 ?>
 
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Welcome to the Music Books !</h1>
-            <p>
-                <a class="btn btn-primary btn-lg">Log in</a>
-            </p>
-            <p>
-                <a class="btn btn-danger btn-lg" href="logout.php">Log out</a>
-            </p>
-        </div>
-    </div>
+<div class="bookHome">
+  <h1 class="titles">Livres</h1>
+</div>
+<div class="musicHome">
+  <h1 class="titles">Musiques</h1>
+</div>
+<script>
+$(document).ready(function() {
+
+   $(".musicHome").click(function() {
+     $(".bookHome").addClass("moveUpBook");
+     $(this).addClass("moveUpMusic");
+   });
+
+   $(".bookHome").click(function() {
+     $(".musicHome").addClass("moveDownMusic");
+     $(this).addClass("moveDownBook");
+   });
+
+});
+</script>
 
 <?php
 include 'footer.php';
