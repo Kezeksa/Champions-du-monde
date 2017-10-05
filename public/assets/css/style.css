@@ -1,0 +1,30 @@
+/*DEBUT HEADER*/
+body {
+    font-family: Poppins;
+    font-size: 20px;
+}
+.nav > li {
+    margin: 0 20px;
+}
+.icon-bar {
+    background-color: white;
+}
+.jumbotron {
+    background-color: lightgrey;
+}
+.navbarFontColor {
+    color: dimgrey;
+}
+.btn-primary {
+    margin-left: 45%;
+    text-align: center;
+}
+.container > h1 {
+    text-align: center;
+    margin: 50px auto;
+}
+.logoHeader {
+    width: 120px;
+}
+/*FIN HEADER*/
+    
