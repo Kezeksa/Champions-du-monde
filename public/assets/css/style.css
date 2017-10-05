@@ -169,7 +169,7 @@ body {
   position: absolute;
   height: 35%;
   Width: 100%;
-  background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d")no-repeat;
+  background: url("https://c.pxhere.com/photos/8f/9e/grandmother_elderly_woman_reading_magazine_read_old_age_women_book-616995.jpg!d") no-repeat center bottom;
   background-size: cover;
   transition: height 2s, margin-top 2s;
   z-index: 2;
