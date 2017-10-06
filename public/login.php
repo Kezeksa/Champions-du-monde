@@ -2,6 +2,7 @@
 // login page
 require '../connect.php';
 $bdd = mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);
+mysqli_set_charset($bdd,"utf8");
 
 session_start();
 
@@ -20,7 +21,7 @@ if (mysqli_num_rows($result)<1) {
 }
 
 // Add user to session
-$_SESSION['username'] = $_POST;
+$_SESSION['username'] = $_POST['username'];
 
 header('Location: index.php');
 
