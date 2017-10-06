@@ -1,10 +1,10 @@
 <?php
 include 'header.php';
 
-if ($_POST) {
+if ($_GET) {
 
-    $search = str_replace(" ", "+", $_POST['search']);
-    $search_type = $_POST['search_type'];
+    $search = str_replace(" ", "+", $_GET['search']);
+    $search_type = $_GET['search_type'];
 
     /*$request = 'http://ws.audioscrobbler.com/2.0/?method=' . $search_type . '.getinfo&api_key=c7adee048083f3f374589ba65810f6f7&' . $search_type . '=' . $search . '&format=json';*/
 
@@ -29,7 +29,7 @@ if ($_POST) {
 </script>
 
 <div class="row">
-    <form action="#" method="post">
+    <form action="#" method="get">
         <div class="form-group col-xs-6 col-xs-offset-1">
             <input type="text" class="form-control" id="searchBook" name="search"
                    value="<?= $_POST['search'] ?? '' ?>" placeholder="Find an album">
@@ -49,8 +49,8 @@ if ($_POST) {
 
 <?php
 
-if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
-    <div>Searching result by <?= $_POST['search_type'] ?>
+if (!empty($_GET) and strlen($_GET['search']) > 0) : ?>
+    <div>Searching result by <?= $_GET['search_type'] ?>
         : <?= $nb_results ?> <?= ($nb_results > 1) ? 'albums found' : 'album found' ?></div>
 
 
