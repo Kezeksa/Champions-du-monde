@@ -59,6 +59,7 @@ include 'header.php';
             $(".formMusic").fadeOut();
         });
     });
+
 </script>
 
 <?php

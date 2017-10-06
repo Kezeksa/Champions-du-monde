@@ -1,3 +1,8 @@
+<script>
+    $(document).ready(function () {
+document.body.style.overflow = "auto";
+});
+</script>
 <?php
 require '../connect.php';
 $bdd = mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);

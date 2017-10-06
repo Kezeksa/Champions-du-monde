@@ -1,3 +1,9 @@
+<script>
+    $(document).ready(function () {
+document.body.style.overflow = "auto";
+});
+</script>
+
 <?php
 
 if ($_POST) {
