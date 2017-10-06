@@ -140,7 +140,7 @@ body {
   margin-top: 16%;
   height: 35%;
   width: 100%;
-  background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
+  background: url("../images/lesvieuxcestmysterieux.png") no-repeat center bottom;
   transition: height 2s, margin-top 2s;
 }
 
