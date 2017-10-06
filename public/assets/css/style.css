@@ -228,3 +228,14 @@ body {
 form {
   text-align: center;
 }
+
+/* Books.php */
+
+.findBook, .searchTitleAuthor, .glyph-search {
+padding-top: 15px;
+}
+
+.result_search {
+    padding-bottom: 15px;
+    padding-left:8em;
+}

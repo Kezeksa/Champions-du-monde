@@ -81,7 +81,7 @@ session_start();
                     <div class="modal-content">
                         <form action="login.php" method="post" class="form-horizontal form_header">
                             <fieldset>
-                                <legend>Déjà enregistré ?</legend>
+                                <legend>Already registered ?</legend>
                                 <div class="form-group">
                                     <label for="login" class="col-sm-2 control-label">Login</label>
                                     <div class="col-sm-9">
@@ -92,7 +92,7 @@ session_start();
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-1 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Envoyer</button>
+                                        <button type="submit" class="btn btn-default">Submit</button>
                                     </div>
                                 </div>
                             </fieldset>

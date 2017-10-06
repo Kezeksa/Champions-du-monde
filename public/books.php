@@ -1,5 +1,3 @@
-
-
 <?php
 
 if ($_POST) {
@@ -19,30 +17,34 @@ include 'header.php';
 ?>
 <script>
     $(document).ready(function () {
-document.body.style.overflow = "auto";
-});
+        document.body.style.overflow = "auto";
+    });
 </script>
-    <div class="row">
-        <form action="#" method="post">
-            <div class="form-group col-xs-6 col-xs-offset-1">
-                <input type="text" class="form-control" id="searchBook" name="search"
-                       value="<?= $_POST['search'] ?? '' ?>" placeholder="Find a book">
-            </div>
-            <div class="col-xs-4">
-                <select name="search_type">
-                    <option value="title">by title</option>
-                    <option value="author">by author</option>
-                </select>
-                <button type="submit" class="btn btn-default"><span
-                            class="glyphicon glyphicon-search"></span> Search
-                </button>
-            </div>
-        </form>
-    </div>
+<div class="row">
+    <form action="#" method="post">
+        <div class="form-group col-xs-6 col-xs-offset-1 findBook">
+            <input type="text" class="form-control" id="searchBook" name="search"
+                   value="<?= $_POST['search'] ?? '' ?>" placeholder="Find a book">
+        </div>
+        <div class="col-xs-1 glyph-search">
+            <button type="submit" class="btn btn-default"><span
+                        class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </div>
+
+        <div class="col-xs-1 col-xs-offset-2 searchTitleAuthor">
+            <select name="search_type">
+                <option value="title">by title</option>
+                <option value="author">by author</option>
+            </select>
+
+        </div>
+    </form>
+</div>
 
 <?php
 if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
-    <div>Searching result by <?= $_POST['search_type'] ?>
+    <div class="result_search">Searching result by <?= $_POST['search_type'] ?>
         : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books find' : 'book find' ?></div>
 
 
@@ -65,10 +67,14 @@ if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
                                     } ?></p>
                                 <h4>Year : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
                                 <?php if (isset($_SESSION)) : ?>
-                                    <p><a href="#" class="btn btn-success" role="button"><span
-                                                    class="glyphicon glyphicon-plus"></span> I have read it !</a>
-                                        <a href="#" class="btn btn-primary" role="button"><span
-                                                    class="glyphicon glyphicon-edit"></span> I want it !</a></p>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-xs-offset-1"><a href="#" class="btn btn-success"
+                                                                                 role="button"><span
+                                                        class="glyphicon glyphicon-plus"></span> I have read it !</a>
+                                        </div>
+                                        <div class="col-xs-5"><a href="#" class="btn btn-primary" role="button"><span
+                                                        class="glyphicon glyphicon-edit"></span> I want it !</a></div>
+                                    </div>
                                 <?php endif ?>
                             </div>
                         </div>
