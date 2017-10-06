@@ -35,7 +35,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.php"><img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png"
+                <a href="index.php"><img src="assets/images/logo.png"
                         class="logoHeader img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse pull-right">
@@ -84,7 +84,7 @@ session_start();
                                 <legend>Déjà enregistré ?</legend>
                                 <div class="form-group">
                                     <label for="login" class="col-sm-2 control-label">Login</label>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-9">
                                         <input type="text" class="form-control" name="username" value="" id="login"
                                                placeholder="Votre nom ici">
                                     </div>
