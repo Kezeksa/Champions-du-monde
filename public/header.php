@@ -1,4 +1,3 @@
-<? xml version = "1.0" encoding = "UTF-8" ?>
 <?php
 session_start();
 
@@ -27,7 +26,6 @@ if (!empty($_POST['user_name'])) {
 
     <title>Hackathon</title>
 </head>
-
 
 <body>
 <header>
@@ -68,7 +66,6 @@ if (!empty($_POST['user_name'])) {
             </div>
         </nav>
     </div>
-
     <div class="jumbotron">
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
@@ -94,7 +91,6 @@ if (!empty($_POST['user_name'])) {
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <button type="submit" class="btn btn-default">Envoyer</button>
@@ -105,7 +101,6 @@ if (!empty($_POST['user_name'])) {
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </header>
