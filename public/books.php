@@ -74,26 +74,35 @@ include 'header.php';
 </script>
 <div class="row">
     <form action="#" method="get">
-        <div class="form-group col-xs-6 col-xs-offset-1">
+        <div class="form-group col-xs-6 col-xs-offset-1 findBook">
             <input type="text" class="form-control" id="searchBook" name="search"
                    value="<?= $_GET['search'] ?? '' ?>" placeholder="Find a book">
         </div>
-        <div class="col-xs-4">
+
+
+        <div class="col-xs-1 col-xs-offset-2 searchTitleAuthor">
+
             <select name="search_type">
                 <option value="title">by title</option>
                 <option value="author">by author</option>
             </select>
-            <button type="submit" class="btn btn-default"><span
-                        class="glyphicon glyphicon-search"></span> Search
-            </button>
+
+            <div class="col-xs-1 glyph-search">
+                <button type="submit" class="btn btn-default"><span
+                            class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
+
         </div>
     </form>
 </div>
 
 <?php
+
 if (!empty($_GET) and strlen($_GET['search']) > 0) : ?>
-    <div>Searching result by <?= $_GET['search_type'] ?>
+    <div class="result_search">Searching result by <?= $_GET['search_type'] ?>
         : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books find' : 'book find' ?></div>
+
 
 
     <div class="row">
@@ -118,6 +127,9 @@ if (!empty($_GET) and strlen($_GET['search']) > 0) : ?>
                                 <p>Author : <?= $resp['author_name'] ?></p>
                                 <h4>Year : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
                                 <?php if (isset($_SESSION)) : ?>
+
+                                   <div class="row">
+<div class="col-xs-4 col-xs-offset-1">
                                     <form action="#" method="post">
                                         <input type="hidden" name="title" value="<?= $resp['title'] ?>">
                                         <input type="hidden" name="author" value="<?= $resp['author_name'] ?>">
@@ -127,7 +139,8 @@ if (!empty($_GET) and strlen($_GET['search']) > 0) : ?>
                                                     class="glyphicon glyphicon-plus"></span> I have read it !
                                         </button>
                                     </form>
-
+                                     </div>
+<div class="col-xs-5">
                                     <form action="#" method="post">
                                         <input type="hidden" name="title" value="<?= $resp['title'] ?>">
                                         <input type="hidden" name="author" value="<?= $resp['author_name'] ?>">
@@ -137,6 +150,8 @@ if (!empty($_GET) and strlen($_GET['search']) > 0) : ?>
                                                     class="glyphicon glyphicon-edit"></span> I want it !
                                         </button>
                                     </form>
+                                     </div>
+                                    </div>
 
                                 <?php endif ?>
                             </div>
