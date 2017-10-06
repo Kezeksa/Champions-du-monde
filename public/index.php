@@ -2,7 +2,6 @@
 include 'header.php';
 ?>
 
-
 <div class="sections">
     <div class="bookHome">
         <h1 class="titles">Books</h1>
@@ -17,8 +16,12 @@ include 'header.php';
     </div>
     <div class="musicHome">
         <h1 class="titles">Musics</h1>
-        <form class="formMusic hiddenFormMusic" action="music.php">
-            <input class="autofocusMusic" type="text" name="researchMusics"><br>
+        <form class="formMusic hiddenFormMusic" action="music.php" method="get">
+            <input class="autofocusMusic" type="text" name="search" required><br>
+                <select name="search_type">
+                    <option value="artist">by artist</option>
+                    <option value="name">by title</option>
+                </select>
             <input type="submit" value="Find">
         </form>
     </div>
@@ -62,6 +65,15 @@ include 'header.php';
             $(this).addClass("hiddenArrowMusic");
             $(".formMusic").fadeOut();
         });
+
+        $(".fbook1").click(function () {
+          $(this).animate({top: "-=300px", left: "-=300px"}, 4000);
+        });
+
+        $(".fbook2").click(function () {
+          $(this).animate({top: "-=300px", left: "+=300px"}, 4000);
+        });
+
     });
 
 </script>

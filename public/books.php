@@ -60,7 +60,6 @@ if ($_GET) {
     $resp_array = json_decode($response, true);
     $nb_results = $resp_array['num_found'];
     $resp_array = $resp_array['docs'];
-
 }
 
 include 'header.php';

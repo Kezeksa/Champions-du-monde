@@ -244,3 +244,12 @@ padding-top: 15px;
     padding-bottom: 15px;
     padding-left:8em;
 }
+
+img {
+  height: 75px;
+  width: auto;
+}
+
+.fbook1, .fbook2 {
+  position: relative;
+}

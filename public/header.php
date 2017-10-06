@@ -26,6 +26,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 <body>
+
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
@@ -65,10 +66,12 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
         </nav>
     </div>
-
     <div class="jumbotron">
         <div class="container">
-            <h1>Welcome to the Music Books !</h1>
+
+            <h1><span><img class="fbook1" src="http://umanitoba.ca/bookstore/images/FlyingBook.png"></span>Welcome to the Music Books !<span><img class="fbook2" src="http://umanitoba.ca/bookstore/images/FlyingBook.png"></span></h1>
+
+
             <!-- Large modal -->
             <?php if (empty($_SESSION)) { ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
@@ -91,7 +94,6 @@ if (session_status() == PHP_SESSION_NONE) {
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <button type="submit" class="btn btn-default">Submit</button>
@@ -102,7 +104,6 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </header>
