@@ -37,7 +37,7 @@ include 'header.php';
 if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
     <div>Searching result by <?= $_POST['search_type'] ?>
         : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books find' : 'book find' ?></div>
-<?php endif ?>
+
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
@@ -72,6 +72,7 @@ if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
             </div>
         </div>
     </div>
+<?php endif ?>
 
 <?php
 include 'footer.php'
