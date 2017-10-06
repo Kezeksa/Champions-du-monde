@@ -2,7 +2,6 @@
 include 'header.php';
 ?>
 
-
 <div class="sections">
     <div class="bookHome">
         <h1 class="titles">Books</h1>
@@ -62,6 +61,15 @@ include 'header.php';
             $(this).addClass("hiddenArrowMusic");
             $(".formMusic").fadeOut();
         });
+
+        $(".fbook1").click(function () {
+          $(this).animate({top: "-=300px", left: "-=300px"}, 4000);
+        });
+
+        $(".fbook2").click(function () {
+          $(this).animate({top: "-=300px", left: "+=300px"}, 4000);
+        });
+
     });
 
 </script>

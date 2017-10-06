@@ -66,7 +66,10 @@ session_start();
 
     <div class="jumbotron">
         <div class="container">
-            <h1>Welcome to the Music Books !</h1>
+
+            <h1><span><img class="fbook1" src="http://umanitoba.ca/bookstore/images/FlyingBook.png"></span>Welcome to the Music Books !<span><img class="fbook2" src="http://umanitoba.ca/bookstore/images/FlyingBook.png"></span></h1>
+
+
             <!-- Large modal -->
             <?php if (empty($_SESSION)) { ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
