@@ -41,8 +41,8 @@ document.body.style.overflow = "auto";
                             <p>Author : <?= $resp['author'] ?></p>
                             <h4>Year : <?= $resp['year'] ?? 'Inconnue' ?></h4>
                             <?php if ($_SESSION['username']) : ?>
-                                <p><a href="delete.php?category=&" class="btn btn-danger" role="button"><span
-                                                class="glyphicon glyphicon-minus"></span> I don't want to see it anymore !</a></p>
+                                <p><a href="delete.php?" class="btn btn-danger" role="button"><span
+                                                class="glyphicon glyphicon-minus"></span> Delete it !</a></p>
                             <?php endif ?>
                         </div>
                     </div>
