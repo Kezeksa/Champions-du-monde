@@ -28,7 +28,7 @@ if (!empty($_POST['user_name'])) {
 </head>
 
 
-<body>
+<body><div class="baudi">
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
