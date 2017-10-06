@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,7 @@ session_start();
 
 
 <body>
+
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
@@ -42,10 +45,10 @@ session_start();
                 <!--<ul class="nav navbar-nav">-->
                 <ul id="menu-demo2">
                     <?php if (!empty($_SESSION)) { ?>
-                        <li><a href="#">My books</a>
+                        <li><a href="books.php">My books</a>
                             <ul>
-                                <li><a href="already_readed.php?category=read" class="navbarFontColor">Books I've read</a></li>
-                                <li><a href="already_readed.php?category=envy" class="navbarFontColor">Books I'd like to read</a></li>
+                                <li><a href="already_readed.php?category=readed" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="already_readed.php?category=wanted" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
                         <li><a href="#">My musics</a>
@@ -63,7 +66,6 @@ session_start();
             </div>
         </nav>
     </div>
-
     <div class="jumbotron">
         <div class="container">
 
@@ -92,7 +94,6 @@ session_start();
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <button type="submit" class="btn btn-default">Submit</button>
@@ -103,7 +104,6 @@ session_start();
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </header>

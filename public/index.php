@@ -5,7 +5,7 @@ include 'header.php';
 <div class="sections">
     <div class="bookHome">
         <h1 class="titles">Books</h1>
-        <form class="formBook hiddenFormBook" action="books.php" method="post">
+        <form class="formBook hiddenFormBook" action="books.php" method="get">
             <input class="autofocusBook" type="text" name="search" required><br>
             <select name="search_type">
                 <option value="title">by title</option>
