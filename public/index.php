@@ -6,14 +6,18 @@ include 'header.php';
 <div class="sections">
     <div class="bookHome">
         <h1 class="titles">Books</h1>
-        <form class="formBook hiddenFormBook" action="">
-            <input class="autofocusBook" type="text" name="researchBooks"><br>
+        <form class="formBook hiddenFormBook" action="books.php" method="get">
+            <input class="autofocusBook" type="text" name="search" required><br>
+            <select name="search_type">
+                <option value="title">by title</option>
+                <option value="author">by author</option>
+            </select>
             <input type="submit" value="Find">
         </form>
     </div>
     <div class="musicHome">
         <h1 class="titles">Musics</h1>
-        <form class="formMusic hiddenFormMusic" action="">
+        <form class="formMusic hiddenFormMusic" action="music.php">
             <input class="autofocusMusic" type="text" name="researchMusics"><br>
             <input type="submit" value="Find">
         </form>

@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,17 +38,17 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.php"><img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png"
+                <a href="index.php"><img src="assets/images/logo.png"
                         class="logoHeader img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <!--<ul class="nav navbar-nav">-->
                 <ul id="menu-demo2">
                     <?php if (!empty($_SESSION)) { ?>
-                        <li><a href="#">My books</a>
+                        <li><a href="books.php">My books</a>
                             <ul>
-                                <li><a href="already_readed.php?category=read" class="navbarFontColor">Books I've read</a></li>
-                                <li><a href="already_readed.php?category=envy" class="navbarFontColor">Books I'd like to read</a></li>
+                                <li><a href="already_readed.php?category=readed" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="already_readed.php?category=wanted" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
                         <li><a href="#">My musics</a>
@@ -81,17 +83,17 @@ session_start();
                     <div class="modal-content">
                         <form action="login.php" method="post" class="form-horizontal form_header">
                             <fieldset>
-                                <legend>Déjà enregistré ?</legend>
+                                <legend>Already registered ?</legend>
                                 <div class="form-group">
                                     <label for="login" class="col-sm-2 control-label">Login</label>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-9">
                                         <input type="text" class="form-control" name="username" value="" id="login"
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-1 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Envoyer</button>
+                                        <button type="submit" class="btn btn-default">Submit</button>
                                     </div>
                                 </div>
                             </fieldset>

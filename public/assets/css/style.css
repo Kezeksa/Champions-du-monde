@@ -19,7 +19,8 @@ body {
     background-color: black;
 }
 .jumbotron {
-    background-image: url('http://quotespics.net/wp-content/uploads/2016/07/depression-wallpaper.jpg');
+    background: url('http://i.huffpost.com/gen/1425427/images/o-OLD-PEOPLE-TEXTING-facebook.jpg') center no-repeat;
+    background-size: cover;
     margin-bottom: 0;
     z-index: 3;
     position: relative;
@@ -139,7 +140,7 @@ body {
   margin-top: 16%;
   height: 35%;
   width: 100%;
-  background: url("http://latherevival.com/wp-content/uploads/2015/02/me.jpg") no-repeat;
+  background: url("../images/lesvieuxcestmysterieux.png") no-repeat center bottom;
   transition: height 2s, margin-top 2s;
 }
 
@@ -225,6 +226,21 @@ body {
 }
 /*FIN ANIMATION NUMERO 1*/
 
+.row {
+  width: 100%;
+}
 form {
+  margin-top: 15px;
   text-align: center;
+}
+
+/* Books.php */
+
+.findBook, .searchTitleAuthor, .glyph-search {
+padding-top: 15px;
+}
+
+.result_search {
+    padding-bottom: 15px;
+    padding-left:8em;
 }

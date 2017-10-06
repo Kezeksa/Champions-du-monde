@@ -10,10 +10,9 @@ WHERE username='" . $_SESSION['username'] . "'
 AND User_Category='" . $_POST['category'] . "'";
 
 $req = "DELETE FROM User_has_Book ub
-JOIN User u ON ub.User_idUser = u.id
-JOIN Book b ON ub.Book_idBook = b.id
-WHERE username='" . $_SESSION['username'] . "'
-AND User_Category='" . $_POST['category'] . "'";
+WHERE";
+
+
 
 $result = mysqli_query($bdd, $req);
 
