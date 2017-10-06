@@ -8,14 +8,14 @@ include 'header.php';
         <h1 class="titles">Books</h1>
         <form class="formBook hiddenFormBook" action="">
             <input class="autofocusBook" type="text" name="researchBooks"><br>
-            <input type="submit">
+            <input type="submit" value="Find">
         </form>
     </div>
     <div class="musicHome">
         <h1 class="titles">Musics</h1>
         <form class="formMusic hiddenFormMusic" action="">
             <input class="autofocusMusic" type="text" name="researchMusics"><br>
-            <input type="submit">
+            <input type="submit" value="Find">
         </form>
     </div>
 </div>
@@ -59,6 +59,7 @@ include 'header.php';
             $(".formMusic").fadeOut();
         });
     });
+
 </script>
 
 <?php

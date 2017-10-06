@@ -1,10 +1,5 @@
 <?php
 session_start();
-
-if (!empty($_POST['user_name'])) {
-    $_SESSION['user_name'] = $_POST['user_name'];
-    header("Location: index.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +22,9 @@ if (!empty($_POST['user_name'])) {
     <title>Hackathon</title>
 </head>
 
+
 <body>
+
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
@@ -39,16 +36,17 @@ if (!empty($_POST['user_name'])) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
+                <a href="index.php"><img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png"
+                        class="logoHeader img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <!--<ul class="nav navbar-nav">-->
                 <ul id="menu-demo2">
-                    <?php if ($_SESSION['user_name']) { ?>
+                    <?php if (!empty($_SESSION)) { ?>
                         <li><a href="#">My books</a>
                             <ul>
-                                <li><a href="#" class="navbarFontColor">Books I've read</a></li>
-                                <li><a href="#" class="navbarFontColor">Books I'd like to read</a></li>
+                                <li><a href="already_readed.php?category=read" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="already_readed.php?category=envy" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
                         <li><a href="#">My musics</a>
@@ -70,7 +68,7 @@ if (!empty($_POST['user_name'])) {
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
             <!-- Large modal -->
-            <?php if (!$_SESSION['user_name']) { ?>
+            <?php if (empty($_SESSION)) { ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
                 </button>
             <?php } else { ?>
@@ -81,13 +79,13 @@ if (!empty($_POST['user_name'])) {
             <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                        <form action="" method="post" class="form-horizontal form_header">
+                        <form action="login.php" method="post" class="form-horizontal form_header">
                             <fieldset>
                                 <legend>Déjà enregistré ?</legend>
                                 <div class="form-group">
                                     <label for="login" class="col-sm-2 control-label">Login</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="user_name" value="" id="login"
+                                        <input type="text" class="form-control" name="username" value="" id="login"
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>
@@ -104,4 +102,3 @@ if (!empty($_POST['user_name'])) {
         </div>
     </div>
 </header>
-
