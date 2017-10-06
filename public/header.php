@@ -35,7 +35,8 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png" class="logoHeader img-responsive">
+                <a href="index.php"><img src="assets/images/e7a9a0a3e7f001893c6b4a3594fa376e.png"
+                        class="logoHeader img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse pull-right">
                 <!--<ul class="nav navbar-nav">-->
@@ -43,8 +44,8 @@ session_start();
                     <?php if (!empty($_SESSION)) { ?>
                         <li><a href="#">My books</a>
                             <ul>
-                                <li><a href="already_readed.php" class="navbarFontColor">Books I've read</a></li>
-                                <li><a href="#" class="navbarFontColor">Books I'd like to read</a></li>
+                                <li><a href="already_readed.php?category=read" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="already_readed.php?category=envy" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
                         <li><a href="#">My musics</a>

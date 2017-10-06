@@ -1,3 +1,4 @@
+
 <?php
 include 'header.php'
     ?>
@@ -7,7 +8,11 @@ include 'header.php'
  * Date: 05/10/17
  * Time: 15:51
  */
-
+ <script>
+     $(document).ready(function () {
+ document.body.style.overflow = "auto";
+ });
+ </script>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
