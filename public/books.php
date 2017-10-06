@@ -1,8 +1,4 @@
-<script>
-    $(document).ready(function () {
-document.body.style.overflow = "auto";
-});
-</script>
+
 
 <?php
 
@@ -21,6 +17,11 @@ if ($_POST) {
 
 include 'header.php';
 ?>
+<script>
+    $(document).ready(function () {
+document.body.style.overflow = "auto";
+});
+</script>
     <div class="row">
         <form action="#" method="post">
             <div class="form-group col-xs-6 col-xs-offset-1">
@@ -63,7 +64,7 @@ if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
                                         echo $auteur;
                                     } ?></p>
                                 <h4>Year : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
-                                <?php if (isset($_SESSION['user_name'])) : ?>
+                                <?php if (isset($_SESSION)) : ?>
                                     <p><a href="#" class="btn btn-success" role="button"><span
                                                     class="glyphicon glyphicon-plus"></span> I have read it !</a>
                                         <a href="#" class="btn btn-primary" role="button"><span
