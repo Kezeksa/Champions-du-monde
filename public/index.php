@@ -66,13 +66,6 @@ include 'header.php';
             $(".formMusic").fadeOut();
         });
 
-        $(".fbook1").click(function () {
-          $(this).animate({top: "-=300px", left: "-=300px"}, 4000);
-        });
-
-        $(".fbook2").click(function () {
-          $(this).animate({top: "-=300px", left: "+=300px"}, 4000);
-        });
 
     });
 
