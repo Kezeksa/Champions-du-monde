@@ -23,7 +23,7 @@ session_start();
 </head>
 
 
-<body><div class="baudi">
+<body>
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
