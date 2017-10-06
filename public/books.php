@@ -43,7 +43,7 @@ document.body.style.overflow = "auto";
 <?php
 if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
     <div>Searching result by <?= $_POST['search_type'] ?>
-        : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books find' : 'book find' ?></div>
+        : <?= $nb_results ?> <?= ($nb_results > 1) ? 'books found' : 'book find' ?></div>
 
 
     <div class="row">

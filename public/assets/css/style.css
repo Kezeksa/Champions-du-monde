@@ -230,5 +230,6 @@ body {
   width: 100%;
 }
 form {
+  margin-top: 15px;
   text-align: center;
 }
