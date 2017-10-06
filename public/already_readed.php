@@ -1,14 +1,28 @@
-
 <?php
+session_start();
 require '../connect.php';
 $bdd = mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);
-mysqli_set_charset($bdd,"utf8");
-/**
- * Created by PhpStorm.
- * User: emlv
- * Date: 06/10/17
- * Time: 04:22
- */
+mysqli_set_charset($bdd, "utf8");
+
+if ($_POST) {
+    $req = "SELECT id FROM User
+        WHERE username='" . $_SESSION['username'] . "'";
+
+    $result = mysqli_query($bdd, $req);
+    $idUser = mysqli_fetch_assoc($result)['id'];
+
+    $req = "SELECT id FROM Book
+        WHERE title='" . $_POST['title'] . "'";
+
+    $result = mysqli_query($bdd, $req);
+    $idBook = mysqli_fetch_assoc($result)['id'];
+
+    $req = "DELETE FROM User_has_Book
+            WHERE User_idUser='" . $idUser . "' 
+            AND Book_idBook='" . $idBook . "'";
+
+    $result = mysqli_query($bdd, $req);
+}
 
 include 'header.php';
 
@@ -23,8 +37,8 @@ $result = mysqli_query($bdd, $req);
 ?>
 <script>
     $(document).ready(function () {
-document.body.style.overflow = "auto";
-});
+        document.body.style.overflow = "auto";
+    });
 </script>
 <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
@@ -41,8 +55,16 @@ document.body.style.overflow = "auto";
                             <p>Author : <?= $resp['author'] ?></p>
                             <h4>Year : <?= $resp['year'] ?? 'Inconnue' ?></h4>
                             <?php if ($_SESSION['username']) : ?>
-                                <p><a href="delete.php?" class="btn btn-danger" role="button"><span
-                                                class="glyphicon glyphicon-minus"></span> Delete it !</a></p>
+
+                                <form action="#" method="post">
+                                    <input type="hidden" name="title" value="<?= $resp['title'] ?>">
+                                    <input type="hidden" name="author" value="<?= $resp['author'] ?>">
+                                    <input type="hidden" name="year" value="<?= $resp['year'] ?>">
+                                    <button type="submit" class="btn btn-infos"><span
+                                                class="glyphicon glyphicon-garbage"></span> Delete it !
+                                    </button>
+                                </form>
+
                             <?php endif ?>
                         </div>
                     </div>

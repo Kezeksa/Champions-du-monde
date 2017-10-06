@@ -3,16 +3,21 @@ require '../connect.php';
 $bdd = mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);
 mysqli_set_charset($bdd,"utf8");
 
-$req = "SELECT User_Category, User_Note, u.Username, b.title, b.author, b.year FROM User_has_Book ub
-JOIN User u ON ub.User_idUser = u.id
-JOIN Book b ON ub.Book_idBook = b.id
-WHERE username='" . $_SESSION['username'] . "'
-AND User_Category='" . $_POST['category'] . "'";
+$req = "SELECT id FROM User
+        WHERE username='" . $_SESSION['username'] . "'";
+
+$result = mysqli_query($bdd, $req);
+$idUser = mysqli_fetch_assoc($result)['id'];
+
+$req = "SELECT id FROM Book
+        WHERE title='" . $_POST['title'] . "'";
+
+$result = mysqli_query($bdd, $req);
+$idBook = mysqli_fetch_assoc($result)['id'];
 
 $req = "DELETE FROM User_has_Book ub
-WHERE";
-
-
+WHERE User_idUser='" . $idUser . "' 
+AND Book_idBook='" . $idBook . "'";
 
 $result = mysqli_query($bdd, $req);
 

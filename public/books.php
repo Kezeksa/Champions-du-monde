@@ -14,8 +14,6 @@ if ($_POST) {
     $year = $_POST['year'];
     $category = $_POST['category'];
 
-    var_dump($_POST);
-
 // Create Book in bdd if not exist
     $req = "SELECT * FROM Book
         WHERE title='" . $_POST['title'] . "'";
