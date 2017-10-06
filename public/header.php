@@ -1,10 +1,5 @@
 <?php
 session_start();
-
-if (!empty($_POST['user_name'])) {
-    $_SESSION['user_name'] = $_POST['user_name'];
-    header("Location: index.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -45,10 +40,10 @@ if (!empty($_POST['user_name'])) {
             <div class="collapse navbar-collapse pull-right">
                 <!--<ul class="nav navbar-nav">-->
                 <ul id="menu-demo2">
-                    <?php if ($_SESSION['user_name']) { ?>
+                    <?php if (!empty($_SESSION)) { ?>
                         <li><a href="#">My books</a>
                             <ul>
-                                <li><a href="#" class="navbarFontColor">Books I've read</a></li>
+                                <li><a href="already_readed.php" class="navbarFontColor">Books I've read</a></li>
                                 <li><a href="#" class="navbarFontColor">Books I'd like to read</a></li>
                             </ul>
                         </li>
@@ -72,7 +67,7 @@ if (!empty($_POST['user_name'])) {
         <div class="container">
             <h1>Welcome to the Music Books !</h1>
             <!-- Large modal -->
-            <?php if (!$_SESSION['user_name']) { ?>
+            <?php if (empty($_SESSION)) { ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".form_login">Log in
                 </button>
             <?php } else { ?>
@@ -83,13 +78,13 @@ if (!empty($_POST['user_name'])) {
             <div class="modal fade form_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                        <form action="" method="post" class="form-horizontal form_header">
+                        <form action="login.php" method="post" class="form-horizontal form_header">
                             <fieldset>
                                 <legend>Déjà enregistré ?</legend>
                                 <div class="form-group">
                                     <label for="login" class="col-sm-2 control-label">Login</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="user_name" value="" id="login"
+                                        <input type="text" class="form-control" name="username" value="" id="login"
                                                placeholder="Votre nom ici">
                                     </div>
                                 </div>

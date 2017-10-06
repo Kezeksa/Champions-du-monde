@@ -7,11 +7,12 @@ session_start();
 
 // Create user in bdd if not exist
 $req = "SELECT * FROM User
-        WHERE Username= '" . $_POST['username'] . "'";
+        WHERE Username='" . $_POST['username'] . "'";
 
 $result = mysqli_query($bdd, $req);
+//var_dump(mysqli_fetch_assoc());
 
-if (mysqli_num_rows($result)) {
+if (mysqli_num_rows($result)<1) {
     $req = "INSERT INTO User (Username)
             VALUES ('" . $_POST['username'] . "')";
 

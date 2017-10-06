@@ -43,6 +43,7 @@ if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
         <div class="col-sm-10 col-sm-offset-1">
             <div class="row">
                 <?php
+
                 foreach ($resp_array as $resp) :
                     ?>
 
@@ -56,7 +57,7 @@ if (!empty($_POST) and strlen($_POST['search']) > 0) : ?>
                                         echo $auteur;
                                     } ?></p>
                                 <h4>Year : <?= $resp['first_publish_year'] ?? 'Inconnue' ?></h4>
-                                <?php if ($_SESSION['user_name']) : ?>
+                                <?php if (isset($_SESSION['user_name'])) : ?>
                                     <p><a href="#" class="btn btn-success" role="button"><span
                                                     class="glyphicon glyphicon-plus"></span> I have read it !</a>
                                         <a href="#" class="btn btn-primary" role="button"><span
